@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Frontend Mentor Age calculator app challenge"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__section">
+        <form id="ageCalculationForm" class="form">
+          <div class="form__group-container">
+            <div class="form__group">
+              <label for="day" class="form__label form__label--day">Day</label>
+              <input
+                type="number"
+                id="day"
+                name="day"
+                placeholder="dd"
+                class="form__input"
+              />
+              <p class="form__error-message"></p>
+            </div>
+            <div class="form__group">
+              <label for="month" class="form__label form__label--month">
+                Month
+              </label>
+              <input
+                type="number"
+                id="month"
+                name="month"
+                placeholder="mm"
+                class="form__input"
+              />
+              <p class="form__error-message"></p>
+            </div>
+            <div class="form__group">
+              <label for="year" class="form__label form__label--year">
+                Year
+              </label>
+              <input
+                type="number"
+                id="year"
+                name="year"
+                placeholder="yyyy"
+                class="form__input"
+              />
+              <p class="form__error-message"></p>
+            </div>
+          </div>
+          <p class="form__error-message form__error-message--date"></p>
+          <div class="form__submit-container">
+            <input
+              type="submit"
+              value=""
+              class="form__submit"
+              aria-label="Submit form"
+            />
+          </div>
+        </form>
+        <div class="result">
+          <p class="result__item">
+            <span id="yearsAge" class="result__value">--</span> years
+          </p>
+          <p class="result__item">
+            <span id="monthsAge" class="result__value">--</span> months
+          </p>
+          <p class="result__item">
+            <span id="daysAge" class="result__value">--</span> days
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

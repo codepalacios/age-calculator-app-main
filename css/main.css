@@ -1,0 +1,235 @@
+/* Fonts */
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* Vars */
+:root {
+  /* Primary */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+/* Reset styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mobile styles */
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--light-grey);
+}
+.main {
+  padding-top: 5.5rem;
+  padding-bottom: 14.875rem;
+}
+.main__section {
+  width: calc(100% - 32px);
+  max-width: 24.5625rem;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 24px 24px 100px 24px;
+  padding: 3rem 24px;
+}
+.form__group-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5.4787rem, max-content));
+  column-gap: 16px;
+}
+.form__label {
+  min-height: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--smokey-grey);
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+.form__label--day.invalid,
+.form__label--month.invalid,
+.form__label--year.invalid {
+  color: var(--light-red);
+}
+.form__input {
+  width: 100%;
+  height: 3.375rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  padding: 0.75rem 16px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.16px;
+  color: var(--off-black);
+}
+.form__input::placeholder {
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+.form__input:hover {
+  cursor: pointer;
+}
+.form__input:focus {
+  outline: none;
+  border: 1px solid var(--purple);
+}
+.form__input::-webkit-inner-spin-button,
+.form__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form__input {
+  -moz-appearance: textfield;
+}
+.form__input.invalid {
+  border: 1px solid var(--light-red);
+}
+.form__error-message {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 21px;
+  color: var(--light-red);
+  display: none;
+}
+.form__error-message.invalid {
+  display: block;
+}
+.form__error-message--date.invalid {
+  display: block;
+}
+.form__submit-container {
+  position: relative;
+  margin: 2rem 0;
+}
+.form__submit-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light-grey);
+}
+.form__submit {
+  display: block;
+  margin: 0 auto;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--purple);
+  background-image: url("../assets/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.625rem 1.625rem;
+  border-radius: 216px;
+  border: none;
+  position: relative;
+  z-index: 1;
+}
+.form__submit:hover {
+  cursor: pointer;
+  background-color: var(--off-black);
+}
+.result__item {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: var(--off-black);
+  overflow-wrap: break-word;
+}
+.result__value {
+  color: var(--purple);
+}
+
+@media only screen and (max-width: 374px) {
+  .result__item {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+  }
+
+  .main {
+    width: calc(100% - 32px);
+    max-width: 52.5rem;
+    margin: 1rem 16px;
+    padding: 0;
+  }
+  .main__section {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 24px 24px 200px 24px;
+    padding: 3.5rem 56px;
+  }
+  .form__group-container {
+    grid-template-columns: max-content max-content 1fr;
+    column-gap: 32px;
+  }
+  .form__label {
+    min-height: 1.3125rem;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+    margin-bottom: 0.5rem;
+  }
+  .form__input {
+    max-width: 10rem;
+    height: 4.5rem;
+    display: block;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .form__submit-container {
+    margin: 0;
+  }
+  .form__submit {
+    margin-right: 0;
+    margin-left: auto;
+    width: 6rem;
+    height: 6rem;
+    background-size: 2.875rem 2.875rem;
+  }
+  .result__item {
+    font-size: 6.5rem;
+  }
+}
